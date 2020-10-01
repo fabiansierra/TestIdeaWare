@@ -11,7 +11,7 @@ class CrudSubscribers{
       $date = $data['custom_fields']["Date"];
     }
 
-    $sql = "INSERT INTO subscribers VALUES(NULL,'".$data['name']."','".$data['email']."','".$data['ad_tracking']."','".$data['tags']['add'][0]."','".$data['custom_fields']["IP"]."','".$date."','".$data['custom_fields']["URL"]."')";
+    $sql = "INSERT INTO subscribers VALUES(NULL,'".$data['name']."','".$data['email']."','".$data['ad_tracking']."','".$data['tags'][0]."','".$data['custom_fields']["IP"]."','".$date."','".$data['custom_fields']["URL"]."')";
 
     if ($conn->query($sql) === TRUE) {
       $fp = fopen('../logs/logs.txt', 'a+');
